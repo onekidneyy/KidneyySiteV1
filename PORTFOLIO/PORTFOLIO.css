@@ -1,0 +1,164 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set font family for all text */
+body,
+h1,
+h2,
+h3,
+p,
+nav a {
+    font-family: Arial, round;
+}
+
+/* Style the main content area */
+.main {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the header and navigation bar */
+header {
+    background-color: #333333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+body {
+    padding-top: 80px;
+}
+
+.logo {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.left-logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.right-logo img {
+    width: 40px;
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+nav a.active {
+    color: #ffcc00;
+}
+
+/* Responsive navigation menu */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .right-logo {
+        padding-left: 10px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Style the portfolio container */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio {
+    margin: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add a glow effect to the portfolio items on hover */
+.portfolio:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+}
+
+.portfolio img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style the overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+    background-color: transparent;
+    opacity: 0;
+    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    border-radius: 22px;
+}
+
+
+/* Style the info text */
+.info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 18px;
+    display: none;
+}
+
+/* Show the info text on hover */
+.portfolio:hover .info {
+    display: block;
+}
+
+/* Style the portfolio items with no link */
+.no-link {
+    cursor: default;
+}
