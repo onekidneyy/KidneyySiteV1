@@ -115,13 +115,6 @@ nav a.active {
     margin: 30px;
     position: relative;
     overflow: hidden;
-    border-radius: 31px;
-}
-
-.portfolio img {
-    width: 100%;
-    height: auto;
-    border-radius: 31px;
 }
 
 /* Add a glow effect to the portfolio items on hover */
@@ -130,6 +123,12 @@ nav a.active {
     opacity: 1;
 }
 
+.portfolio img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style the overlay */
 .overlay {
     position: absolute;
     top: 0;
@@ -140,8 +139,8 @@ nav a.active {
     opacity: 0;
     transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
     border-radius: 31px;
-    cursor: pointer;
 }
+
 
 /* Style the info text */
 .info {
@@ -154,10 +153,8 @@ nav a.active {
     display: none;
 }
 
-/* Show the info text on hover and on touch */
-.portfolio:hover .info,
-.portfolio:focus .info,
-.portfolio:active .info {
+/* Show the info text on hover */
+.portfolio:hover .info {
     display: block;
 }
 
