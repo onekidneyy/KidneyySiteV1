@@ -196,6 +196,8 @@ nav a.active {
     width: 100%;
     max-width: 600px;
     border-radius: 10px;
+    z-index: 1;
+    /* Ensures the image is on top */
 }
 
 /* Style the overlay for the poster */
@@ -213,6 +215,8 @@ nav a.active {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
+    /* Ensures the overlay is above the image */
 }
 
 .poster:hover .overlay {
