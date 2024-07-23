@@ -15,12 +15,6 @@ nav a {
     font-family: Arial, round;
 }
 
-/* Set background color for the body */
-body {
-    background-color: #d3d3d3;
-    padding-top: 80px;
-}
-
 /* Style the main content area */
 .main {
     text-align: center;
@@ -43,6 +37,7 @@ header {
 
 body {
     padding-top: 80px;
+    background-color: #d3d3d3;
 }
 
 .logo {
@@ -122,157 +117,119 @@ nav a.active {
 
 .main-image {
     width: 100%;
+    height: auto;
+    max-width: 550px;
     border-radius: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .intro-text {
     width: 100%;
     background-color: #333333;
-    padding: 25px;
+    padding: 50px;
     border-radius: 10px;
     text-align: center;
+    color: #fff;
+    max-width: 600px;
+}
+
+.intro-text h2 {
+    font-size: 30px;
 }
 
 .intro-text p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
     margin-bottom: 20px;
-    color: #fff;
 }
 
-.intro-logo {
-    width: 100%;
-    max-width: 240px;
-}
-
-/* Style for the main characters section */
-.main-characters {
+/* Style for the app features section */
+.app-features {
     padding: 20px;
     text-align: center;
 }
 
-.main-characters h2 {
+.app-features h2 {
     font-size: 30px;
     margin-bottom: 20px;
     color: #000;
 }
 
-.character-grid {
+.features-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.character {
-    width: 100%;
+.feature-item {
+    width: 45%;
+    margin: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
-    margin-bottom: 20px;
-    background-color: #333333;
-    padding: 10px;
-    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-.character img {
-    width: 100%;
-    border-radius: 10px;
+.feature-item img {
+    width: 50px;
+    height: 50px;
     margin-bottom: 10px;
 }
 
-.character h3 {
-    font-size: 30px;
-    margin-bottom: 5px;
-    color: #fff;
-}
-
-.character p {
+.feature-item p {
     font-size: 20px;
-    margin-bottom: 0;
-    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.poster {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.feature-item span {
+    font-size: 14px;
+    color: #555;
 }
 
-.poster img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
-    z-index: 1;
-    /* Ensures the image is on top */
-}
-
-/* Style the overlay for the poster */
-.poster .overlay {
-    position: absolute;
-    top: 0;
-    left: 1;
-    width: 100%;
-    max-width: 600px;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    /* Ensures the overlay is above the image */
-}
-
-.poster:hover .overlay {
-    opacity: 1;
-}
-
-.poster .overlay .text {
-    color: #fff;
-    font-size: 24px;
-    text-align: center;
+.feature-item:hover {
+    transform: scale(1.05);
 }
 
 /* Media query for larger screens */
-@media (min-width: 768px) {
+@media (min-width: 700px) {
     .intro {
         flex-direction: row;
     }
 
     .main-image {
-        width: 30%;
+        width: 29%;
         margin-right: 20px;
+        margin-bottom: 0px;
     }
 
     .intro-text {
         max-width: 50%;
     }
 
+    .intro-text h2 {
+        font-size: 45px;
+    }
+
     .intro-text p {
         font-size: 35px;
     }
 
-    .main-characters h2 {
-        font-size: 40px;
+    .app-features h2 {
+        font-size: 35px;
     }
 
-    .character-grid {
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
+    .feature-item {
+        width: 20%;
     }
 
-    .character {
-        width: 30%;
-    }
-
-    .character h3 {
-        font-size: 30px;
-    }
-
-    .character p {
+    .feature-item p {
         font-size: 20px;
+    }
+
+    .feature-item span {
+        font-size: 16px;
     }
 }
